@@ -57,6 +57,8 @@ const joinOnTour = async (req, res) => {
     await tour.save();
     res.status(200).json("წარმატებით დაჯოინდით ტურზე");
   } catch (error) {
+    console.log(error.message);
+
     res.status(500).json("სერვერის შცდომა");
   }
 };
