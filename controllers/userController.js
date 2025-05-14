@@ -38,6 +38,7 @@ export const joinTour = async (req, res) => {
       message: "წარმატებით დაჯოინდით ტურზე",
     });
   } catch (error) {
+    console.log(error.message);
     res.status(500).json({ message: "სერვერის შეცდომა" + error.message });
   }
 };
